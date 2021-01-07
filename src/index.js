@@ -1,12 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import { ProvideAuth } from "./services/use-auth.js";
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ProvideAuth>
+	  <App />
+	</ProvideAuth>
   </React.StrictMode>,
   document.getElementById('root')
 );
